@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
             public void onSwiped(RecyclerView.ViewHolder viewHolder, int swipeDir) {
                 long id = (long) viewHolder.itemView.getTag();
                 opDialog(id);
+//                myAdapter.swapCursor(getAllName());
             }
 
             //COMPLETED (11) attach the ItemTouchHelper to the waitlistRecyclerView
