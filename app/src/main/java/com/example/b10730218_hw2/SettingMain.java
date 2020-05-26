@@ -7,8 +7,7 @@ import androidx.core.app.NavUtils;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
+
 
 public class SettingMain extends AppCompatActivity {
 
@@ -20,9 +19,11 @@ public class SettingMain extends AppCompatActivity {
         ActionBar actionBar = this.getSupportActionBar();
 
         // Set the action bar back button to look like an up button
+
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
+
 //        Button back = (Button) findViewById(R.id.action_back);
 //
 //        back.setOnClickListener(new View.OnClickListener() {
@@ -40,7 +41,9 @@ public class SettingMain extends AppCompatActivity {
         int id = item.getItemId();
         // When the home button is pressed, take the user back to the VisualizerActivity
         if (id == android.R.id.home) {
-            NavUtils.navigateUpFromSameTask(this);
+//            NavUtils.navigateUpFromSameTask(this);
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }
